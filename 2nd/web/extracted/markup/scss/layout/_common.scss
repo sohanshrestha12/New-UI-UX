@@ -1,0 +1,128 @@
+#wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    max-width: 1210px;//width+padding left+right+boder left+right
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &.lg{
+        max-width: 1310px;
+    }
+}
+
+.style{
+    position: relative;
+    padding-left: 44px;
+    display: inline-block;
+    vertical-align: top;
+    /* margin: 0 0 0 0;  */
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 42px;
+        height: 42px;
+        background: url('../img/icon1.png') no-repeat center /cover;
+        display: block;
+    }
+}
+.bg-strech{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.overline-text{
+    text-transform: uppercase;
+    font-size: 34pt;
+}
+.btn {
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    @include animate(all,0.35s,ease-in-out);
+
+    &.primary {
+        padding: 18px 69px;
+        background-color: #333333;
+        border: 2px solid white;
+        border-radius: 30px;
+        color: white;
+        display: inline-block;
+        /* min-width: 230px;
+    display: inline-block;
+    padding: 15px;
+    vertical-align: top; */
+    &:hover{
+        background-color: $black;
+        color: #333;
+        border-color: #bf3d42;
+    }
+    }
+
+    &.secondary {
+        display: inline-block;
+        padding: 18px 69px;
+        min-width: 180px;
+        background-color: #bf3d42;
+        border: 2px solid #bf3d42;
+        border-radius: 30px;
+        color: white;
+        overflow: hidden;
+
+        &:hover{
+            background-color: #bf3d42;
+            color: #333;
+            border-color: #333;
+        }
+    }
+   
+}
+.two-columns, .four-columns{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+    .col{
+        flex: 1;
+        padding: 0 20px;
+
+        &.large-col{
+            flex: auto;
+            width: 58.33%;
+        }
+
+        &.small-col{
+            flex: auto;
+            width: 41.66%;
+        }
+    }
+}
+
+.four-columns{
+    margin: 0 -10px;
+
+    .col{
+        padding: 0 10px;
+        flex: 1;
+        width: auto;
+    }
+}
+
+.slick-arrow{
+    border: none;
+    background:none;
+}
+
+
